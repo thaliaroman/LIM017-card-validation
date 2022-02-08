@@ -1,8 +1,8 @@
 
 const validator = {
-  isValid:function(cn){
+  isValid:function(number){
     
-    let cardNumber = cn;
+    let cardNumber = number;
     let invertedCardNumber = cardNumber.split("").reverse();
     let convertNumberArray = invertedCardNumber.map(Number);
     let multBy2 = function(element, index){
@@ -37,16 +37,16 @@ const validator = {
     return booleanResult;
     },
 
-  maskify:function(cn){
+  maskify:function(string){
       
-      let cardNumber = cn;
+      let cardNumber = string;
       let totalDigits=cardNumber.length;
       if (totalDigits < 4) {return cardNumber;}
       let indexStart4Digits=totalDigits-4;
       let digitsToShow=cardNumber.slice(indexStart4Digits,totalDigits);
       let maskedNumber ='#'.repeat(indexStart4Digits) + digitsToShow;
-      
       return maskedNumber;
+      
     }
  
   }
