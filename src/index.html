@@ -4,18 +4,44 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+  </head> 
   <body>
-    <div>
+    <div id="div_saludo">
     <header> 
       <br><br>
       Si quieres hacer un pago o una compra con tu tarjeta de crédito, puedes validarla
-    <input type="button" value="Aquí"> <br><br> </header>
+    <input type="button" value="Aquí" id="iniciar"> <br><br> </header>
     </div>
-    <main> inserta los números de tu tarjeta
-      <input type="text" name= "texBox" id="creditCardNumber">
-      <input type="button" name="botonvalidar" value="Validar tarjeta" id="botonvalidar">
-    </main>
+
+    <div id="div_tarjeta">
+    <main>
+      
+      <form>
+      <h4> Tu tarjeta es: </h4>
+     
+        <input type="radio" name= "card" value="Visa" checked> Visa 
+        <input type="radio" name= "card" value="Mastercard"> MasterCard
+        <input type="radio" name= "card" value="Amex"> American Express 
+        <input type="radio" name= "card" value="Dinners"> Dinnes Club <br><br>
+
+       <label> Ingresa los numeros de tu tarjeta: </label>
+       <input type="number" name="texBox" id="cardNumber" class="solo-numero"/><br><br>
+        
+       <input type="button" name="botonvalidar" value="Validar tarjeta" id="botonvalidar">
+      </form>
+           
+      </main>
+    </div>
+
+    <div id="div_resultado">
+
+      <p id="masked"></p> <br><br>
+
+      <p id="valida"></p><br><br>
+      <p id="invalida"></p>
+
+    </div>
+
     <footer></footer>
     <script src="index.js" type="module"></script>
     

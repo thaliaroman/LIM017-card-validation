@@ -1,7 +1,6 @@
 
 const validator = {
   isValid:function(number){
-    
     let cardNumber = number;
     let invertedCardNumber = cardNumber.split("").reverse();
     let convertNumberArray = invertedCardNumber.map(Number);
@@ -38,7 +37,6 @@ const validator = {
     },
 
   maskify:function(string){
-      
       let cardNumber = string;
       let totalDigits=cardNumber.length;
       if (totalDigits < 4) {return cardNumber;}
@@ -46,9 +44,7 @@ const validator = {
       let digitsToShow=cardNumber.slice(indexStart4Digits,totalDigits);
       let maskedNumber ='#'.repeat(indexStart4Digits) + digitsToShow;
       return maskedNumber;
-      
     }
- 
   }
 
 
