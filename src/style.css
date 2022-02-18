@@ -1,11 +1,69 @@
-div#div_tarjeta{
-    display: None
+html,body,main {
+    height: 100%;
+    margin:0 auto;
 }
 
-div#div_resultado{
-    display: None
+*{
+    text-align: center;
 }
 
+
+#header{
+    background:rgb(216, 208, 208);
+    color:black;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    border-bottom:10px solid black ;  
+    height: 12%;
+}
+
+.logo{
+    font-size: 30px;
+    text-align:left;
+    font-family: georgia, serif;
+    margin-left: 20px;
+}
+
+#cardlogo{
+    width:85px;
+    height:70px;
+    float:left;
+    margin-left:5px;
+}
+
+#inicio{
+    background:-webkit-linear-gradient(#f09199, #e41405,black);
+    height: 100%;
+    width:100%;
+}
+
+.invitacion{
+    text-align:center;
+    color:rgb(237, 237, 245);
+    border-color:black;
+    line-height: 16px;
+}
+
+#iniciar{
+    width: 200px;
+    height: 40px;
+    background-color:white;
+    border-radius: 20%;
+    border: 4px solid black;
+    text-align: center;
+    font-size:22px; 
+    color:black;    
+    font-weight: 3px;    
+    float:bottom;
+}
+
+#chica{
+    position:relative; 
+    width: 220px;
+    height: 320px; 
+    margin-top: 85px;
+}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -15,3 +73,153 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
+
+#numerodetarjeta{
+    display: none;
+    background:-webkit-linear-gradient(#f09199, #e41405,black);
+    height: 100%;
+    overflow: hidden;
+    }
+
+#cardNumber{
+    background:white;
+    width: 280px;
+    height: 25px;
+    font-size: 24px;
+    margin-top: 35px;
+}
+
+#rectangulo {
+    width: 340px;
+    height: 190px;
+    background: -webkit-linear-gradient(#948d8d, #312f2e,rgb(13, 13, 88),black);
+    border-radius: 8%;
+    margin:0 auto;
+    border:2px solid rgb(5, 5, 5);
+    margin-top:0%;
+    float:center;
+    }
+
+#chip{
+    width: 50x;
+    height: 50px;
+    float:left;
+    margin:10px 10px;
+}
+
+#label{
+    background: 0%;
+    font-size:20px;
+    margin-top: 10px;
+    position: absolute;
+    text-align:center;
+    color:white;
+}
+
+#textarjeta{
+    text-align:right;
+    color: white;
+    font-size:30px;
+    margin: 0px 10px;
+}
+
+.franquicias{
+    font-size:30px;
+}
+
+.tutarjeta{
+    color:white;
+    font-size:35px;
+    margin-top:100px;
+}
+
+#botonvalidar{
+width: 200px;
+height: 40px;
+background-color:white;
+border-radius: 20%;
+border: 4px solid black;
+text-align: center;
+font-size:22px; 
+color:black;    
+font-weight: 3px;
+}
+#resultado{
+display: none;
+background:-webkit-linear-gradient(#f09199, #e41405,black);
+height:100%;
+font-size:25px;
+overflow:hidden;
+}
+
+#chip2{
+    width: 50x;
+    height: 50px;
+    float:left;
+    margin-left:10px;
+    margin-top: 10px;
+    
+}
+#mycard{
+    text-align: right;
+    color:white;
+    font-size:30px;
+    margin-right: 7px;
+    margin-bottom:0px;
+}
+
+#valida{
+    font-size: 50 px;
+    font-weight:4px;
+    color: white;
+}
+
+
+#invalida{
+    font-size: 50 px;
+    font-weight:4px;
+    color: white;
+}
+
+#volver{
+    width: 200px;
+    height: 40px;
+    background-color:white;
+    border-radius: 20%;
+    border: 4px solid black;
+    text-align: center;
+    font-size:22px;
+    color:black;
+    font-weight: 3px;
+}
+
+#masked{
+margin-top:25%;
+background:white;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+#rectangulo2 {
+    width: 340px;
+    height: 190px;
+    background: -webkit-linear-gradient(#948d8d, #312f2e,rgb(13, 13, 88),black);
+    border-radius: 8%;
+    border: 2px solid rgb(5, 5, 5);
+    margin-left:37%;
+    margin-top:10%;
+    }
+#footer{
+    background-color: rgb(245, 236, 236);
+    width: 100%;
+    height:155px;
+    border: 2px solid black;
+
+}
+
+#in{
+    width:50px;
+    height: 50px;
+    float:center;
+}
+

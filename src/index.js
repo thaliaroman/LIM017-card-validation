@@ -1,26 +1,33 @@
 import validator from './validator.js';
 
-document.getElementById("botonvalidar").addEventListener("click", validarTarjeta);
-document.getElementById("iniciar").addEventListener("click", mostrarTarjeta);
+document.getElementById("iniciar").addEventListener("click", fullIn);
+document.getElementById("botonvalidar").addEventListener("click", validateCard);
 
-function mostrarTarjeta(){
-    document.getElementById("div_saludo").style.display = "none";
-    document.getElementById("div_tarjeta").style.display = "inline";
+function fullIn(){
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("numerodetarjeta").style.display = "block";
+
 }
 
-function validarTarjeta(){
-    document.getElementById("div_tarjeta").style.display = "none";
-    document.getElementById("div_resultado").style.display = "inline";
+function validateCard (){
+    document.getElementById("numerodetarjeta").style.display = "none";
+    document.getElementById("resultado").style.display = "block";
 
     let card = document.getElementById("cardNumber").value;
-    let tipoTarjeta = document.querySelector("input[name='card']:checked").value;
+    let franchise  = document.querySelector("input[name='card']:checked").value;
     let valid = validator.isValid(card);
     let masked = validator.maskify(card);
 
-    document.getElementById("masked").innerHTML = "Tarjeta " + masked + " verificada."
+    document.getElementById("masked").innerHTML = masked
     if(valid){
-        document.getElementById("valida").innerHTML = "Tu tarjeta " + tipoTarjeta + " es válida. ¡Úsala ya!"
+        document.getElementById("valida").innerHTML = "(✓)   Tu tarjeta " + franchise  + " es válida. ¡Úsala ya!"
     }else{
-        document.getElementById("valida").innerHTML = "Tu tarjeta " + tipoTarjeta + " es inválida. Intenta con otra tarjeta."
+        document.getElementById("invalida").innerHTML = " (x)   Tu tarjeta " + franchise  + " es inválida. Intenta con otra tarjeta."
     }
 }
+
+function volveralinicio(){
+    document.getElementById("inicio").style.display = "block";
+    document.getElementById("resultado").style.display= "none";
+}
+document.getElementById("volver").addEventListener("click",volveralinicio);

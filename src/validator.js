@@ -2,6 +2,9 @@
 const validator = {
   isValid:function(number){
     let cardNumber = number;
+
+    if (cardNumber.length<10) {return false;}
+
     let invertedCardNumber = cardNumber.split("").reverse();
     let convertNumberArray = invertedCardNumber.map(Number);
     let multBy2 = function(element, index){
@@ -25,19 +28,19 @@ const validator = {
     sumOfNumbers += finalArray[i]
     }
     let result= function(){
-      if(sumOfNumbers % 10 === 0){
+      if(sumOfNumbers % 10 === 0 ){
         return true;
-      } else{
-        return false;
       }
-      };
+    else{return false;
+    }
+  }
 
     let booleanResult = result();
     return booleanResult;
     },
 
-  maskify:function(string){
-      let cardNumber = string;
+  maskify:function(str){
+      let cardNumber = str;
       let totalDigits=cardNumber.length;
       if (totalDigits < 4) {return cardNumber;}
       let indexStart4Digits=totalDigits-4;

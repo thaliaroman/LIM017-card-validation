@@ -2,47 +2,77 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <title>Card validator</title>
     <link rel="stylesheet" href="style.css" />
   </head> 
+
   <body>
-    <div id="div_saludo">
-    <header> 
-      <br><br>
-      Si quieres hacer un pago o una compra con tu tarjeta de crédito, puedes validarla
-    <input type="button" value="Aquí" id="iniciar"> <br><br> </header>
-    </div>
+<div>
+    <header>
+      <div id="header">
+        <img id="cardlogo" src="https://extranet.corferias.com/servicio/reg_pag/images/tc.png#">
+        <h1 class="logo">CardValidator.pe</h1>
+      </div>
+    </header>
+  </div>
 
-    <div id="div_tarjeta">
     <main>
-      
-      <form>
-      <h4> Tu tarjeta es: </h4>
-     
-        <input type="radio" name= "card" value="Visa" checked> Visa 
-        <input type="radio" name= "card" value="Mastercard"> MasterCard
-        <input type="radio" name= "card" value="Amex"> American Express 
-        <input type="radio" name= "card" value="Dinners"> Dinnes Club <br><br>
+    <div id="inicio">
 
-       <label> Ingresa los numeros de tu tarjeta: </label>
-       <input type="number" name="texBox" id="cardNumber" class="solo-numero"/><br><br>
-        
-       <input type="button" name="botonvalidar" value="Validar tarjeta" id="botonvalidar">
+      <img id="chica" src="http://www.globalvalles.com/img/chica_sonrisa.png">
+      <h1 class="invitacion"> Si quieres hacer un pago o una compra <br> <br>con tu tarjeta de crédito, puedes validarla</h1>
+      <input type="button" value="Aquí" id="iniciar"> <br><br> 
+
+    </div>
+
+    <div id="numerodetarjeta">
+      <form class="franquicias">
+      <h4 class="tutarjeta"> Tu tarjeta es: </h4>
+        <input type="radio" id="visa" name="card" value="Visa"> Visa
+        <input type="radio" id="MasterCard" name="card" value="Mastercard"> MasterCard
+        <input type="radio" id="Amex" name="card" value="American Express"> American Express 
+        <input type="radio" id="Dinners" name="card" value="Dinners Club"> Dinnes Club <br><br>
       </form>
-           
-      </main>
+        <div id="rectangulo">
+          <img id="chip" src="https://img.icons8.com/officel/452/sim-card-chip.png">
+          <label id="label"> Ingresa los números de tu tarjeta: </label>
+          <input type="number" name="texBox" id="cardNumber" oninput= "javascript:if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
+          maxlength ="16" required/><br><br>
+          <p id="textarjeta"> My Card </p>
+        </div>
+        
+       <br><br><input type="button" name="botonvalidar" value="Validar tarjeta" id="botonvalidar">
+
     </div>
 
-    <div id="div_resultado">
+    <div id="resultado">
+      <div id="rectangulo2">
+        <img id="chip2" src="https://img.icons8.com/officel/452/sim-card-chip.png">
+        <p id="masked"></p>
+        <p id="mycard"> My Card </p>
+      </div>
 
-      <p id="masked"></p> <br><br>
+       <br><p id="valida"></p>
 
-      <p id="valida"></p><br><br>
-      <p id="invalida"></p>
+      <br><p id="invalida"></p>
+
+      <br><input type=" button" value="Validar otra tarjeta" id="volver">
 
     </div>
 
-    <footer></footer>
+  
+    </main> 
+    
+<div>
+    <footer>
+      <div id="footer">
+        <p> CardValidator.pe<br><br>
+        Página creada por Thalia Román | Estudiante de laboratoria</p>
+        <img id="in" src= "https://images.vexels.com/media/users/3/137382/isolated/preview/c59b2807ea44f0d70f41ca73c61d281d-icono-del-logotipo-linkedin-by-vexels.png">
+      </div>
+    </footer>
+    </div>
+
     <script src="index.js" type="module"></script>
     
   </body>
