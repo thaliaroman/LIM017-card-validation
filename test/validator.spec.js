@@ -10,6 +10,9 @@ describe('validator', () => {
     it('debería ser una función', () => {
       expect(typeof validator.isValid).toBe('function');
     });
+    it('debería retornar false cuando lenght <10', () => {
+      expect(validator.isValid('408395')).toBe(false);
+    });
 
     it('debería retornar true para "4083952015263"', () => {
       expect(validator.isValid('4083952015263')).toBe(true);

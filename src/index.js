@@ -1,12 +1,12 @@
 import validator from './validator.js';
 
+
 document.getElementById("iniciar").addEventListener("click", fullIn);
 document.getElementById("botonvalidar").addEventListener("click", validateCard);
 
 function fullIn(){
     document.getElementById("inicio").style.display = "none";
     document.getElementById("numerodetarjeta").style.display = "block";
-
 }
 
 function validateCard (){
