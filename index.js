@@ -30,4 +30,11 @@ function volveralinicio(){
     document.getElementById("inicio").style.display = "block";
     document.getElementById("resultado").style.display= "none";
 }
+
+function goLinkedin(){
+    window.location.href = "https://www.linkedin.com/in/thalia-lisebt-rom%C3%A1n-l%C3%B3pez/";
+}
+
 document.getElementById("volver").addEventListener("click",volveralinicio);
+
+document.getElementById("in").addEventListener("click",goLinkedin);
