@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Card validator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>cardValidator.pe</title>
+    <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="style.css" />
   </head> 
 
@@ -10,7 +12,7 @@
 <div>
     <header>
       <div id="header">
-        <img id="cardlogo" src="https://extranet.corferias.com/servicio/reg_pag/images/tc.png#">
+        <img id="cardlogo" src="./images/logo.png">
         <h1 class="logo">CardValidator.pe</h1>
       </div>
     </header>
@@ -19,7 +21,7 @@
     <main>
     <div id="inicio">
 
-      <img id="chica" src="http://www.globalvalles.com/img/chica_sonrisa.png">
+      <img id="chica" src="./images/chica.png">
       <h1 class="invitacion"> Si quieres hacer un pago o una compra <br> <br>con tu tarjeta de crédito, puedes validarla</h1>
       <input type="button" value="Aquí" id="iniciar"> <br><br> 
 
@@ -34,7 +36,7 @@
         <input type="radio" id="Dinners" name="card" value="Dinners Club"> Dinnes Club <br><br>
       </form>
         <div id="rectangulo">
-          <img id="chip" src="https://img.icons8.com/officel/452/sim-card-chip.png">
+          <img id="chip" src="./images/sim-card-chip.png">
           <label id="label"> Ingresa los números de tu tarjeta: </label>
           <input type="number" required name="texBox" id="cardNumber" oninput= "javascript:if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"   
           maxlength ="16"/><br><br>
@@ -47,7 +49,7 @@
 
     <div id="resultado">
       <div id="rectangulo2">
-        <img id="chip2" src="https://img.icons8.com/officel/452/sim-card-chip.png">
+        <img id="chip2" src="./images/sim-card-chip.png">
         <p id="masked"></p>
         <p id="mycard"> My Card </p>
       </div>
@@ -68,7 +70,7 @@
       <div id="footer">
         <p> CardValidator.pe<br><br>
         Página creada por Thalia Román | Estudiante de laboratoria</p>
-        <img id="in" src= "https://images.vexels.com/media/users/3/137382/isolated/preview/c59b2807ea44f0d70f41ca73c61d281d-icono-del-logotipo-linkedin-by-vexels.png">
+        <img id="in" src= "./images/logo-linkedin.png">
       </div>
     </footer>
     </div>
